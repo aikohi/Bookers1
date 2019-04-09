@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<title>Show</title>
+ </head>
+
+  <body>
+   <table>
+   	<tr>
+	<p class="show-text"><strong>Title:</strong>&nbsp;<%= @blog.title %></p>
+	</tr>
+
+	<tr>
+	<p class="show-text"><strong>Body:</strong>&nbsp;<%= @blog.body %></p>
+	</tr>
+   </table>
+
+	<%= link_to "Edit",edit_blog_path, class: 'edit_#{blog.id}' %>
+	<%= link_to "Back","/",  class: 'back' %>
+   </div>
+  </body>
+</html>

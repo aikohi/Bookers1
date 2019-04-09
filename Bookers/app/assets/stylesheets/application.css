@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content:"";
+  display:block;
+  clear:both;
+}
+
+body {
+	margin: 40px;
+}
+
+h1 {
+	margin-bottom: 30px;
+}
+
+p td {
+	text-align: center;
+	margin: 30px 50px;
+
+}
+
+.flash {
+	color: #00ff7f;
+}
+
+.show-text {
+	margin: 30px auto;
+	font-size: 20px;
+}
+
+.index-text {
+	margin: 20px;
+}
+.start {
+	margin-left: 20px;
+	font-size: 18px;
+}
