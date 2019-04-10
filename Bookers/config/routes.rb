@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  resources :blogs
+  get "/blogs" => "blogs#index"
   get "/" => "blogs#top"
+  resources :blogs
 end

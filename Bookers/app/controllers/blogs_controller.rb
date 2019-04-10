@@ -1,8 +1,8 @@
 class BlogsController < ApplicationController
-  def index
+  def top
   end
 
-  def top
+  def index
     @blogs = Blog.all
     @blog = Blog.new
   end
@@ -35,7 +35,7 @@ class BlogsController < ApplicationController
     blog = Blog.find(params[:id])
     if blog.destroy
       flash[:success] = "Book was successfully destroyed(^o^)/"
-    redirect_to "/"
+    redirect_to "/blogs"
   end
   end
 
