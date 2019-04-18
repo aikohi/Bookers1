@@ -1,0 +1,23 @@
+<%= render 'books/list' %>
+
+<section class="title clearfix">
+<h1>Books</h1>
+ <table class="table">
+  <thead>
+   <tr>
+    <th>Title</th>
+    <th>&nbsp;Opinion</th>
+    <th></th>
+   </tr>
+  </thead>
+
+ <tbody>
+  <% @books_user.each do |book| %>
+    <tr>
+     <td><%= link_to book.title, book_path(book.id), class: "show_#{book.id}" %></td>
+     <td>&nbsp;&nbsp;<%= book.opinion %></td>
+    </tr>
+   <% end %>
+  </tbody>
+ </table>
+</body>
