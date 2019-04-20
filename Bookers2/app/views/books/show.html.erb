@@ -10,7 +10,7 @@
   	<div class="flash">
       <%= flash[:update] %>
     </div>
-
+<%= render 'books/list', books: @books %>
  <section class="title clearfix">
   <h1>Book detail</h1>
    <table class="table">
@@ -28,12 +28,12 @@
 	 	</td>
 	 	<td>
 	 	<% if @book.user == current_user %>
-	 	<button class="btn btn-success"><%= link_to "Edit",edit_book_path(@book.id), class: 'edit_#{@book.id}' %></button>
+	 	<button class="btn btn-success"><%= link_to "Edit",edit_book_path(@book.id), class: 'edit_book_#{@book.id}' %></button>
 	 	<% end %>
 	    </td>
 	    <td>
 	 	<% if @book.user == current_user %>
-		<button class="btn btn-danger"><%= link_to "Destroy", book_path(@book.id), class: "destroy_#{@book.id}", method: :delete, "data-confirm" => "本気？本当に消すんですか?" %></button>
+		<button class="btn btn-danger"><%= link_to "Destroy", book_path(@book.id), class: "destroy_book_#{@book.id}", method: :delete, "data-confirm" => "本気？本当に消すんですか?" %></button>
 		 <% end %>
 		</td>
 	  </tr>
